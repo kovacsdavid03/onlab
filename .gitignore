@@ -1,0 +1,9 @@
+.env
+
+docker-compose.yaml
+
+logs/
+
+plugins/
+
+venv/
