@@ -1,2 +1,2 @@
-# onlab
-Önálló laboratórium c. tárgy projektem
+
+Önálló laboratórium c. tárgyból készülő projektem
