@@ -3,8 +3,9 @@
 docker-compose.yaml
 dockerfile
 
-./airflow/*
-!./airflow/dags/
+airflow/*
+airflow/dags/__pycache__/
+!airflow/dags/
 
 .venv/
 
