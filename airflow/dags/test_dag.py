@@ -11,8 +11,9 @@ import requests
 
 
 def print_welcome():
-
-    print('Welcome to Airflow!')
+    
+    print('Welcome to the Airflow scheduler!')
+   
 
 
 
@@ -24,7 +25,13 @@ def print_date():
 
 def print_random_quote():
 
-    print('Quote of the day: Ez egy idezet')
+    url = "https://api.quotable.io/random"
+    response = requests.get(url, verify=False)
+    if response.status_code == 200:
+        quote_data = response.json()
+        print(f'"{quote_data["content"]}" - {quote_data["author"]}')
+    else:
+        print("Failed to fetch a quote.")
 
 
 

@@ -9,3 +9,6 @@ airflow/dags/__pycache__/
 
 .venv/
 
+kaggle.json
+
+landing_zone/*
