@@ -1,0 +1,6 @@
+[build-system]
+requires = ["setuptools", "kaggle", "pandas", "sqlalchemy", "pyodbc"]
+build-backend = "setuptools.build_meta"
+
+[tool.dagster]
+module_name = "movies_load_pkg01"

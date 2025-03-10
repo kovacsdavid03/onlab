@@ -1,0 +1,9 @@
+tmpo6owke24
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+
+movies_load_pkg01/archive/*

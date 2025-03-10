@@ -1,0 +1,15 @@
+INSERT INTO [ONLAB].[dbo].[movies]
+SELECT
+	[movieId]
+	, [imdbId]
+	, [adult]
+	, [budget]
+	, [original_title]
+	, [popularity]
+	, [release_date]
+	, [revenue]
+	, [runtime]
+	, [tagline]
+	, [vote_average]
+	, [vote_count]
+FROM [ONLAB].[dbo].temp_movies
