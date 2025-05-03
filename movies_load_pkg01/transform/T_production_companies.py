@@ -24,6 +24,4 @@ def T_production_companies():
 
     df_final.dropna(subset=['production_company'], inplace=True)
 
-    #print(df_final)
-    #df_final.to_csv(output_csv_file, index=False, encoding='utf-8')
     df_final.to_sql('temp_production_companies', con=db_conn(), if_exists='append', index=False)

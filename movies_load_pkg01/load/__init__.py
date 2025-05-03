@@ -1,3 +1,3 @@
-from .load_table import execute_load 
+from .execute_sql import execute_sql
 
-__all__ = ['execute_load']
+__all__ = ['execute_sql']
