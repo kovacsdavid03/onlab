@@ -1,7 +1,4 @@
 import pandas as pd
-import ast
-import sqlalchemy
-import pyodbc
 from movies_load_pkg01.resources.db_conn import db_conn
 from movies_load_pkg01.resources.safe_literal_eval import safe_literal_eval
 

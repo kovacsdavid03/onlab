@@ -1,7 +1,4 @@
 import pandas as pd
-import ast
-import sqlalchemy
-import pyodbc
 from movies_load_pkg01.resources.db_conn import db_conn
 from movies_load_pkg01.resources.safe_literal_eval import safe_literal_eval
 
@@ -25,6 +22,4 @@ def T_genres():
     df_final.dropna(subset=['movieId', 'genre'], inplace=True)
     df_final.dropna(subset=['genre'], inplace=True)
 
-    #output_csv_file = 'genre_table.csv'  # Replace with your desired output CSV file path
-    #df_final.to_csv(output_csv_file, index=False, encoding='utf-8')
     df_final.to_sql('temp_genres', con=db_conn(), if_exists='append', index=False)
