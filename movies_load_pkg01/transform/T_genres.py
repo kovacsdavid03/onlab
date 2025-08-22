@@ -1,10 +1,13 @@
 import pandas as pd
 from movies_load_pkg01.resources.db_conn import db_conn
 from movies_load_pkg01.resources.safe_literal_eval import safe_literal_eval
+from dagster import get_dagster_logger
 
 def T_genres():
+    logger = get_dagster_logger()
     csv_file = './movies_load_pkg01/landing_zone/movies_metadata.csv'  
     df = pd.read_csv(csv_file, encoding='utf-8') 
+    logger.info(f"Loaded {csv_file} with {df.shape[0]} rows and {df.shape[1]} columns.")
 
     df['genres'] = df['genres'].fillna('[]')
     df['genres'] = df['genres'].apply(safe_literal_eval)
@@ -22,4 +25,7 @@ def T_genres():
     df_final.dropna(subset=['movieId', 'genre'], inplace=True)
     df_final.dropna(subset=['genre'], inplace=True)
 
+    logger.info(f"DataFrame 'temp_genres' has {df_final.shape[0]} rows and {df_final.shape[1]} columns.")
+
     df_final.to_sql('temp_genres', con=db_conn(), if_exists='append', index=False)
+    logger.info(f"DataFrame written to SQL table 'temp_genres' with {df_final.shape[0]} rows.")

@@ -6,4 +6,5 @@ __pycache__/
 *.pyd
 *.pyw
 
-movies_load_pkg01/archive/* 
+movies_load_pkg01/archive/*
+movies_load_pkg01/landing_zone
