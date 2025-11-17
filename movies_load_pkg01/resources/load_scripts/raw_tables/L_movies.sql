@@ -1,5 +1,5 @@
 INSERT INTO [ONLAB].[dbo].[movies]
-SELECT
+SELECT DISTINCT
 	[movieId]
 	, [imdbId]
 	, [adult]

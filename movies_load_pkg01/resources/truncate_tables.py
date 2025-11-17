@@ -40,7 +40,8 @@ temp_ss_tables: list = [
     "temp_dim_language",
     "temp_dim_keyword",
     "temp_fact_movies",
-    "temp_dim_time"
+    "temp_dim_time",
+    "temp_dim_favourite"
 ]
 
 def truncate_tables(tables: list) -> None:

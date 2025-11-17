@@ -1,5 +1,5 @@
 INSERT INTO [ONLAB].[dbo].[genres]
-SELECT
+SELECT DISTINCT
 	[movieId]
 	, [genre]
 FROM [ONLAB].[dbo].[temp_genres]

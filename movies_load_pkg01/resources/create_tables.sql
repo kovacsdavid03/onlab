@@ -302,3 +302,16 @@ CREATE TABLE [bridge_language](
 	[language_sid] INT FOREIGN KEY REFERENCES dim_language([language_sid]),
 	[movie_sid] INT FOREIGN KEY REFERENCES fact_movies([movie_sid])
 )
+
+CREATE TABLE temp_dim_favourite(
+	[user_id] INT
+	, movieId INT
+	, created_at DATETIME
+)
+
+CREATE TABLE dim_favourite(
+	favourite_sid INT IDENTITY(1,1) PRIMARY KEY
+	, [user_id] INT
+	, movieId INT
+	, created_at DATETIME
+)

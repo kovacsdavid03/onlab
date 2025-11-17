@@ -1,5 +1,5 @@
 INSERT INTO [ONLAB].[dbo].[crew]
-SELECT
+SELECT DISTINCT
 	[movieId]
 	, [department]
 	, [gender]

@@ -23,7 +23,6 @@ def T_movies():
     })
 
     movies_df['tagline'] = movies_df['tagline'].fillna('')
-    movies_df['imdbId'] = movies_df['imdbId'].str.lstrip('tt') #imdbId are stored as strings, remove the 'tt' prefix
     movies_df['movieId'] = pd.to_numeric(movies_df['movieId'], errors='coerce') #there is a malformed entry in the dataset that pandas can't detect, so we force it to numeric
     movies_df['popularity'] = pd.to_numeric(movies_df['popularity'], errors='coerce', downcast='float') #convert scientific notation to standard decimal
     movies_df.dropna(subset=['movieId', 'imdbId', 'original_title'], inplace=True)

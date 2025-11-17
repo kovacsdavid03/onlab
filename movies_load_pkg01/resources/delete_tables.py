@@ -17,7 +17,7 @@ operations = [
     ('dim_language', 'bridge_language', True),
     ('dim_keyword', 'bridge_keyword', True),
     ('dim_time', None, False),  # No identity column
-    ('fact_movies', None, True)
+    ('fact_movies', None, True) # Has identity column
 ]
 
 def delete_ss_tables() -> None:

@@ -1,5 +1,5 @@
 INSERT INTO [ONLAB].[dbo].[keywords]
-SELECT
+SELECT DISTINCT
 	  [movieId]
 	, [keyword]
 FROM [ONLAB].[dbo].[temp_keywords]
